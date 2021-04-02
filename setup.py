@@ -10,7 +10,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name='_'.join(proj_name.split('_')),
+    name='-'.join(proj_name.split('_')),
     author=author,
     author_email=author_email,
     description=description,
