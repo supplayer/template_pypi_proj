@@ -241,6 +241,6 @@ Temporary Items
 .apdisk
 
 # others
-# .gitignore
+.gitignore
 .idea/
-tests/
+# tests/
