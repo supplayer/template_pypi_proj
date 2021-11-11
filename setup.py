@@ -1,16 +1,18 @@
 import setuptools
+import re
 
-proj_name = 'proj_name'
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+proj_name = re.search(r'^\#.*', long_description).group()[2:]
 description = ""
 install_requires = []
 author = "Supplayer"
 author_email = "x254724521@hotmail.com"
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
 setuptools.setup(
-    name='-'.join(proj_name.split('_')),
+    name='-'.join(proj_name.split('_')) if '_' in proj_name else proj_name,
     author=author,
     author_email=author_email,
     description=description,
