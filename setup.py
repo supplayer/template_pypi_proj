@@ -8,6 +8,7 @@ install_requires = []
 packages_include = ('',)
 author = "Supplayer"
 author_email = "x254724521@hotmail.com"
+python_requires=">=3.6"
 ################################################################
 
 with open("README.md", "r") as fh:
@@ -30,7 +31,7 @@ setuptools.setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=python_requires,
     install_requires=install_requires,
     setup_requires=['setuptools_scm'],
     use_scm_version=True
