@@ -1,18 +1,20 @@
 import setuptools
 import re
 
-pattern = r'^\#.*'
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-    
+
 ################################################################
-proj_name = re.search(pattern, long_description).group()[2:]
 description = ""
 install_requires = []
 packages_include = ('',)
 author = "Supplayer"
 author_email = "x254724521@hotmail.com"
 ################################################################
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+pattern = r'^\#.*'
+proj_name = re.search(pattern, long_description).group()[2:]
 
 setuptools.setup(
     name='-'.join(proj_name.split('_')) if '_' in proj_name else proj_name,
