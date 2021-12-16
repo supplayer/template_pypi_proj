@@ -8,7 +8,7 @@ install_requires = []
 packages_include = ('',)
 author = "Supplayer"
 author_email = "x254724521@hotmail.com"
-python_requires=">=3.6"
+python_requires = ">=3.6"
 ################################################################
 
 with open("README.md", "r") as fh:
